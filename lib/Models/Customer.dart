@@ -2,7 +2,7 @@ import './Comment.dart';
 import './Seller.dart';
 import './User.dart';
 import './Order.dart';
-import './Food.dart';
+
 
 class Customer extends User{
   String _addresses ;
