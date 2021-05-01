@@ -3,3 +3,7 @@
 build/
 lib/main.dart
 test/
+.packages
+android/
+.metadata
+pubspec.lock
