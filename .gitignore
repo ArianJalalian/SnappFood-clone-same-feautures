@@ -1,0 +1,8 @@
+.dart_tool 
+.idea 
+android 
+ios 
+test 
+.metadata 
+.packages 
+*.iml
