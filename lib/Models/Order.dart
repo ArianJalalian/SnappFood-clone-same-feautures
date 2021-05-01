@@ -27,7 +27,7 @@ class Order{
   set time(DateTime value) {
     _time = value;
   }
-  set price(double value) {
+  set price(int value) {
     _price = value;
   }
   set foods(List<Food> value) {

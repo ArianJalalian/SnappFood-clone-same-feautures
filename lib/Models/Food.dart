@@ -15,7 +15,7 @@ class Food {
   set type(FoodType value) {
     _type = value;
   }
-  set price(double value) {
+  set price(int value) {
     _price = value;
   }
   set isAvailable(bool value) {
