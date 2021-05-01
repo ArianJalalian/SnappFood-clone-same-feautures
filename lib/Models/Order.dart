@@ -8,7 +8,7 @@ class Order{
   Customer _customer ;
   String _destination ;
   List<Food> _foods ;
-  double _price ;
+  int _price ;
   DateTime _time ;
   bool _isDelivered ;
 

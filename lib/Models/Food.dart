@@ -4,7 +4,7 @@ class Food {
 
   String  _name ;
   bool _isAvailable ;
-  double _price ;
+  int _price ;
   FoodType _type ;
 
  get name => _name;
