@@ -25,7 +25,12 @@ class Customer extends User{
   }
 
   Customer(int id , String name , String password , String phoneNumber )
-      : super(id , name , password , phoneNumber) ;
+      : super(
+    id: id,
+    name: name,
+    password: password,
+    phoneNumber: phoneNumber,
+  ) ;
 
 
   void addComment(String commentText , int score , int sellerId , DateTime time ){

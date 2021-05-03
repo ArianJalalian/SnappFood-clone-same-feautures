@@ -24,8 +24,13 @@ class Seller extends User{
     _address = value;
   }
 
-  Seller(int id , String name , String password , String phoneNumber )
-    : super(id , name , password , phoneNumber) ;
+ Seller(int id , String name , String password , String phoneNumber )
+     : super(
+   id: id,
+   name: name,
+   password: password,
+   phoneNumber: phoneNumber,
+ ) ;
 
 
   void addFood(Food food){
