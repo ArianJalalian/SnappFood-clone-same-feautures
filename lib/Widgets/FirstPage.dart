@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:same_features/Widgets/TextStyle.dart';
+import 'package:same_features/Models/User.dart';
 
 class FirstPageInit extends StatelessWidget {
   final Function onSignIn;
@@ -60,7 +62,15 @@ class _MyFormState extends State<MyForm> {
           passwordField(),
           ElevatedButton(
             onPressed: (){
-              onSignIn();
+              if (_formKey.currentState.validate()) {
+                _formKey.currentState.save();
+                onSignIn(
+                    User(
+                      phoneNumber: _phoneNumber,
+                      password: _password,
+                    )
+                );
+              }
             },
             child: Text("sign in"),
           ),
@@ -84,12 +94,18 @@ class _MyFormState extends State<MyForm> {
   Widget phoneNumberField() {
     return TextFormField(
       cursorColor: Theme.of(context).primaryColor,
+      keyboardType: TextInputType.phone,
       decoration: InputDecoration(
         labelText: "Phone Number",
         prefixIcon: Icon(Icons.phone),
       ),
       onSaved: (value) {
         _phoneNumber = value;
+      },
+      validator: (value){
+        if (value == "")
+          return "Enter Phone Number";
+        return null;
       },
     );
   }
@@ -117,6 +133,11 @@ class _MyFormState extends State<MyForm> {
         ),
         onSaved: (value){
           _password = value;
+        },
+        validator: (value){
+          if (value == "")
+            return "Enter password";
+          return null;
         },
       ),
     );
