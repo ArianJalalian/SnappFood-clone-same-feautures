@@ -5,6 +5,8 @@ ThemeData appThemeData() {
 
       primaryColor: Colors.pink,
 
+      errorColor: Color.fromRGBO(102, 102, 51, 1),
+
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.pink),
