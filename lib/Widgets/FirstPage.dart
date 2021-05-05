@@ -10,26 +10,31 @@ class FirstPageInit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Sign In"),
+      ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 20),
-              child: Text(
-                "Welcome To My App",
-                style: MyTextStyle.boldTitleStyle(),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: Text(
+                  "Welcome To My App",
+                  style: MyTextStyle.boldTitleStyle(),
+                ),
               ),
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: MyForm(
-                onSignIn: onSignIn,
-                onSignUP: onSignUP,
+              Container(
+                width: MediaQuery.of(context).size.width * 0.8,
+                child: MyForm(
+                  onSignIn: onSignIn,
+                  onSignUP: onSignUP,
+                ),
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+        )
       ),
     );
   }
