@@ -1,3 +1,5 @@
+import 'package:same_features/Models/Order.dart';
+
 import './Comment.dart';
 import './User.dart';
 import './Food.dart';
@@ -5,8 +7,9 @@ import './Food.dart';
 class Seller extends User{
  String _address ;
  String _restaurantName ;
- List <Food> _menu ;
- List <Comment> _comments ;
+ List <Food> _menu = [];
+ List <Comment> _comments = [];
+ List <Order> _orders = [];
  bool _isAvailable ;
 
  get address => _address;
@@ -24,7 +27,7 @@ class Seller extends User{
     _address = value;
   }
 
- Seller(int id , String name , String password , String phoneNumber )
+ Seller({int id , String name , String password , String phoneNumber})
      : super(
    id: id,
    name: name,
@@ -38,6 +41,10 @@ class Seller extends User{
   }
   void addComment(Comment comment){
     _comments.add(comment) ;
+  }
+
+  void addOrder(Order order){
+    _orders.add(order);
   }
 
 }
