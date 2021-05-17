@@ -1,7 +1,7 @@
 class Comment {
   String _commentText;
   String _answer = null;
-  String _name;
+  String _name ;
   DateTime _time;
   int _score;
   int _sellerId; // shows that this comment belongs to which seller

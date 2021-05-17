@@ -7,6 +7,7 @@ import './Food.dart';
 class Seller extends User{
  String _address ;
  String _restaurantName ;
+ String _rating ;
  List <Food> _menu = [];
  List <Comment> _comments = [];
  List <Order> _orders = [];
@@ -16,8 +17,10 @@ class Seller extends User{
  get restaurantName => _restaurantName;
  get isAvailable => _isAvailable;
  get menu => _menu;
+ get comments => _comments;
+ get rating => _rating;
 
-  set isAvailable(bool value) {
+ set isAvailable(bool value) {
     _isAvailable = value;
   }
   set restaurantName(String value) {
