@@ -3,8 +3,8 @@ import './Comment.dart';
 class User{
   int id ;
   String name ;
-  final String phoneNumber ;
-  final String password ;
+  String phoneNumber ;
+  String password ;
   // _location ??
 
 
