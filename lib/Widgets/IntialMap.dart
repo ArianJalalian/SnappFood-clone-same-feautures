@@ -4,7 +4,7 @@ import 'package:latlong/latlong.dart';
 
 class IntialMapPage extends StatefulWidget {
   @override
-  _MapPageState createState() => _IntialMapPageState();
+  _IntialMapPageState createState() => _IntialMapPageState();
 }
 
 class _IntialMapPageState extends State<IntialMapPage> {

@@ -30,7 +30,7 @@ class Seller extends User {
 
   void addFood(Food food) {
     menu.add(food);
-
+  }
   void addComment(Comment comment) {
     comments.add(comment);
   }
