@@ -8,6 +8,6 @@ class Food {
   final int price ;
   FoodType type ;
 
-
   Food({this.name , this.type , this.isAvailable  , this.price, this.description}) ;
+
 }

@@ -1,5 +1,4 @@
 import 'package:same_features/Models/Order.dart';
-
 import './Comment.dart';
 import './User.dart';
 import './Food.dart';
@@ -31,7 +30,6 @@ class Seller extends User {
 
   void addFood(Food food) {
     menu.add(food);
-  }
 
   void addComment(Comment comment) {
     comments.add(comment);

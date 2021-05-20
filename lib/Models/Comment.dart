@@ -19,5 +19,4 @@ class Comment{
     answer.isEmpty  ? isAnswered = false : isAnswered = true ;
     return isAnswered ;
   }
-
 }
