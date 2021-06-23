@@ -55,6 +55,7 @@ class _MyFormState extends State<MyForm> {
   String _password;
   Function onSignIn;
   Function onSignUP;
+  String errorText = "";
   @override
   Widget build(BuildContext context) {
     onSignUP = widget.onSignUP;
@@ -73,7 +74,8 @@ class _MyFormState extends State<MyForm> {
                     User(
                       phoneNumber: _phoneNumber,
                       password: _password,
-                    )
+                    ),
+                    writeError,
                 );
               }
             },
@@ -103,6 +105,7 @@ class _MyFormState extends State<MyForm> {
       decoration: InputDecoration(
         labelText: "Phone Number",
         prefixIcon: Icon(Icons.phone),
+        errorText: errorText,
       ),
       onSaved: (value) {
         _phoneNumber = value;
@@ -146,5 +149,11 @@ class _MyFormState extends State<MyForm> {
         },
       ),
     );
+  }
+
+  void writeError(String error) {
+    setState((){
+      this.errorText = error;
+    });
   }
 }
